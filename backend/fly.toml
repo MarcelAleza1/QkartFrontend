@@ -1,0 +1,18 @@
+# fly.toml app configuration file generated for lively-dust-7831 on 2023-07-13T18:46:52+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "lively-dust-7831"
+primary_region = "ams"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
